@@ -3,8 +3,7 @@ class Song < ActiveRecord::Base
   belongs_to :genre
 
   def get_genre_name
-    self.genres.map do |t|
-      t.name
+    self.genres(:name)
     end
   end
 
